@@ -43,6 +43,7 @@ public class Test : MonoBehaviour
         lastboss.Attack(0);
         // 防御用の関数を呼び出す
         lastboss.Defence(3);
+
         //**********発展課題：Bossクラスに、変数mpとMagic関数を作成してStart関数から呼び出そう***********
         // （魔法）攻撃用の関数を呼び出す
         for (int i=1;i<=10; i++)
@@ -53,12 +54,13 @@ public class Test : MonoBehaviour
                 Debug.Log("MPが足りないため、魔法が使えない。");
             }
         }
+
         //練習：新しくBossクラスのmidboss変数を作り、Attack関数やDefence関数を呼び出してみましょう。
         Boss fainalboss = new Boss();
         fainalboss.Attack(10);
         fainalboss.Defence(5);
 
-        //**********課題：配列を宣言して出力しよう***********
+        //**********課題：配列を宣言して出力しよう*************
         int[] array = { 5, 10, 15, 20, 30 };
 
         for (int i = 0; i < array.Length; i++)
