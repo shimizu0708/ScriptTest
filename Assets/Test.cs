@@ -15,11 +15,21 @@ public class Boss
     }
 
     // (魔法）攻撃用の関数
-    public void Magic()
+    public int Magic()
     {
         this.mp -= 5;
-        Debug.Log( "魔法攻撃をした！残りMPは " + this.mp + "。");
+        if (this.mp >= 5)
+        {
+            Debug.Log("魔法攻撃をした！残りMPは " + this.mp + "。");
+            return 0;
+        }
+        else
+       {
+            Debug.Log(" MPが足りないため、魔法が使えない。");
+            return 1;
+        }
     }
+
 
     // 防御用の関数
     public void Defence(int damage)
@@ -46,14 +56,18 @@ public class Test : MonoBehaviour
 
         //**********発展課題：Bossクラスに、変数mpとMagic関数を作成してStart関数から呼び出そう*************
         // （魔法）攻撃用の関数を呼び出す
-        for (int i=1;i<=10; i++)
+        for (int i = 1; i <= 10; i++)
         {
-            lastboss.Magic();
-            if(i>=10)
+            if (lastboss.Magic() == 0)
             {
-                Debug.Log("MPが足りないため、魔法が使えない。");
+                i--; //魔力が今回53ですが、もっと大きな数字にも対応出来るようにfor文の条件式を永続的にする
+             }
+            else
+            {
+                break;
             }
         }
+    
 
         //練習：新しくBossクラスのmidboss変数を作り、Attack関数やDefence関数を呼び出してみましょう。
         Boss fainalboss = new Boss();
