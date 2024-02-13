@@ -44,7 +44,7 @@ public class Test : MonoBehaviour
         // 防御用の関数を呼び出す
         lastboss.Defence(3);
 
-        //**********発展課題：Bossクラスに、変数mpとMagic関数を作成してStart関数から呼び出そう***********
+        //**********発展課題：Bossクラスに、変数mpとMagic関数を作成してStart関数から呼び出そう************
         // （魔法）攻撃用の関数を呼び出す
         for (int i=1;i<=10; i++)
         {
