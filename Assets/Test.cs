@@ -15,7 +15,7 @@ public class Boss
     }
 
     // (魔法）攻撃用の関数
-    public void mp_Attack()
+    public void Magic()
     {
         this.mp -= 5;
         Debug.Log( "魔法攻撃をした！残りMPは " + this.mp + "。");
@@ -27,7 +27,7 @@ public class Boss
         Debug.Log(damage + "のダメージを受けた");
         // 残りhpを減らす
         this.hp -= damage;
-        Debug.Log(this.hp);
+        Debug.Log(this.hp+"（稼働確認用）");
     }
 }
 
@@ -48,7 +48,7 @@ public class Test : MonoBehaviour
         // （魔法）攻撃用の関数を呼び出す
         for (int i=1;i<=10; i++)
         {
-            lastboss.mp_Attack ();
+            lastboss.Magic();
             if(i>=10)
             {
                 Debug.Log("MPが足りないため、魔法が使えない。");
