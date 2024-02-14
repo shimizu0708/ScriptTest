@@ -17,9 +17,9 @@ public class Boss
     // (魔法）攻撃用の関数
     public int Magic()
     {
-        this.mp -= 5;
         if (this.mp >= 5)
         {
+            this.mp -= 5;
             Debug.Log("魔法攻撃をした！残りMPは " + this.mp + "。");
             return 0;
         }
